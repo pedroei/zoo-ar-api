@@ -14,6 +14,7 @@ app.use(express.json());
 app.set('view engine', 'ejs');
 
 // routes
+app.use('/', (req, res) => res.send('AR models API'));
 app.use('/armodels', require('./routes/armodels'));
 
 app.listen(PORT, (err) => {
